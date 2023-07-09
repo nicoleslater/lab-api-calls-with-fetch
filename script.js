@@ -9,13 +9,13 @@ const centeredSection = document.querySelector(".centered")
 
 const newSection = document.querySelector(".card")
 
-button.addEventListener("click", function (){
+button.addEventListener("click",  (e) => {
+    e.preventDefault()
     console.log("firing click")
-    console.log(newSection)
-    
+   
     fetch(url)
 
-    .then(data => data.json())
+    .then(data => console.log(data))
     
 
     .catch(err => alert("Try Again"));
