@@ -15,13 +15,23 @@ button.addEventListener("click",  (e) => {
    
     fetch(url)
 
-    .then(data => console.log(data))
+    .then(data => data.json())
     
+    .then(json => console.log(json))
 
     .catch(err => alert("Try Again"));
 })
 
 const showQuestion = (json) => {
+
+    let questions = json.results
+
+    for (const key in questions) {
+        if (Object.hasOwnProperty.call(object, key)) {
+            const answers = questions[key];
+            
+        }
+    }
 
     centeredSection.innerHTML =  `
         <article class="card">
