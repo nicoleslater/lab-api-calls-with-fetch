@@ -7,11 +7,11 @@ const button = document.querySelector('button[type="submit"]')
 
 const centeredSection = document.querySelector(".centered")
 
-
+const newSection = document.querySelector(".card")
 
 button.addEventListener("click", function (){
     console.log("firing click")
-    console.log(data)
+    console.log(newSection)
     
     fetch(url)
 
@@ -28,8 +28,9 @@ const showQuestion = (json) => {
         <h2>CATEGORY</h2>
         <p>QUESTION</p>
         <button>Show Answer</button>
-        <p class="hidden">CORRECT ANSWER</p>
+      <p class="hidden">Correct Answer</p>
         </article>
+    
     
     `
 }
