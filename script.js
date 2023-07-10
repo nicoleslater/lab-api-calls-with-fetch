@@ -25,7 +25,7 @@ button.addEventListener("click",  (e) => {
 const showQuestion = (json) => {
 
     let results = json.results
-    let questionHTML = '';
+    let questionsHTML = '';
 
 
 
