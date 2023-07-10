@@ -24,23 +24,22 @@ button.addEventListener("click",  (e) => {
 
 const showQuestion = (json) => {
 
-    let questions = json.results
+    let results = json.results
+    let questionHTML = '';
 
-    for (const key in questions) {
-        if (Object.hasOwnProperty.call(object, key)) {
-            const answers = questions[key];
-            
-        }
-    }
 
-    centeredSection.innerHTML =  `
-        <article class="card">
-        <h2>CATEGORY</h2>
-        <p>QUESTION</p>
-        <button>Show Answer</button>
-      <p class="hidden">Correct Answer</p>
-        </article>
-    
-    
-    `
+
+  for (let i = 0; i < results.length; i++) {
+    questionsHTML += `
+    <article class="card">
+    <h2>${results[i].category}</h2>
+    <p>${results[i].question}</p>
+    <button class="show-answer-btn">Show Answer</button>
+    <p class="hidden">${results[i].correct_answer}</p>
+    </article>`;
+  }
+
+    centered.innerHTML = questionsHTML;
+   
+    // const showAnswerButton
 }
