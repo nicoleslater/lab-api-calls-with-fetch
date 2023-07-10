@@ -41,5 +41,11 @@ const showQuestion = (json) => {
 
     centered.innerHTML = questionsHTML;
    
-    // const showAnswerButton
+    
 }
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("show-answer-btn")){
+
+    }
+})
+
